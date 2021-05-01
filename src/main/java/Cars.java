@@ -13,8 +13,8 @@ public class Cars {
 			cars.add(new Car(carName)));
 	}
 
-	public Car getCar(int position) {
-		return cars.get(position);
+	public Car getCar(int carOrder) {
+		return cars.get(carOrder);
 	}
 
 	public void printScore() {
@@ -26,11 +26,11 @@ public class Cars {
 		cars.forEach(car -> car.play());
 	}
 
-	public List<Car> getWinner() {
+	public List<String> getWinnerNames() {
 		int winnerScore = getWinnerScore();
-		List<Car> winners = new ArrayList<>();
-		cars.forEach(car -> chooseWinner(winners, car, winnerScore));
-		return winners;
+		List<String> winnerNames = new ArrayList<>();
+		cars.forEach(car -> chooseWinner(winnerNames, car, winnerScore));
+		return winnerNames;
 	}
 
 	private int getWinnerScore() {
@@ -41,10 +41,10 @@ public class Cars {
 		return Collections.max(scoreList);
 	}
 
-	private void chooseWinner(List<Car> winners, Car car, int winnerScore) {
+	private void chooseWinner(List<String> winners, Car car, int winnerScore) {
 		if (car.getScore() == winnerScore) {
 			car.setWinner();
-			winners.add(car);
+			winners.add(car.getName());
 		}
 	}
 }

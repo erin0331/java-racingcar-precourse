@@ -44,7 +44,7 @@ public class CarsTest {
 	@Test
 	void 우승자_1명() {
 		cars.getCar(0).play();
-		Assertions.assertThat(cars.getWinner().size()).isEqualTo(1);
+		Assertions.assertThat(cars.getWinnerNames().size()).isEqualTo(1);
 	}
 
 	@Test
@@ -52,6 +52,6 @@ public class CarsTest {
 		cars.getCar(0).play();
 		cars.getCar(1).play();
 
-		Assertions.assertThat(cars.getWinner().size()).isEqualTo(2);
+		Assertions.assertThat(cars.getWinnerNames().size()).isEqualTo(2);
 	}
 }

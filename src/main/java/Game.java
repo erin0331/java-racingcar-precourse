@@ -1,3 +1,4 @@
+import utils.PrintHelper;
 import utils.Validator;
 
 public class Game {
@@ -15,6 +16,10 @@ public class Game {
 			cars.play();
 			cars.printScore();
 		}
+		printResult();
 	}
 
+	public void printResult() {
+		PrintHelper.printResult(cars.getWinnerNames());
+	}
 }
