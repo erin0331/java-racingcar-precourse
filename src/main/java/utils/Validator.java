@@ -8,7 +8,7 @@ import java.util.Set;
 public class Validator {
 	private static final String CAR_NAME_DELIMITER = ",";
 
-	public static List<String> carNames(String inputCarNames) {
+	public static List<String> checkCarNames(String inputCarNames) {
 		List<String> carNames = Arrays.asList(inputCarNames.split(CAR_NAME_DELIMITER));
 		checkCarCount(carNames);
 		for (String carName : carNames) {
@@ -34,6 +34,23 @@ public class Validator {
 		Set set = new HashSet<>(carNames);
 		if (set.size() != carNames.size()) {
 			throw new IllegalArgumentException("중복된 자동차가 있습니다.");
+		}
+	}
+
+	public static int checkRoundCount(String inputRoundCount) {
+		int roundCount = 0;
+		try {
+			roundCount = Integer.parseInt(inputRoundCount);
+		} catch (NumberFormatException e) {
+			throw new IllegalArgumentException("라운드는 숫자만 입력 가능합니다.");
+		}
+		checkUnderOneRoundCount(roundCount);
+		return roundCount;
+	}
+
+	private static void checkUnderOneRoundCount(int roundCount) {
+		if (roundCount < 1) {
+			throw new IllegalArgumentException("라운드는 1이상만 입력 가능합니다.");
 		}
 	}
 

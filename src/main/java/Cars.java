@@ -8,7 +8,7 @@ public class Cars {
 	private final List<Car> cars = new ArrayList<>();
 
 	public Cars(String carNames) {
-		Validator.carNames(carNames).forEach(carName ->
+		Validator.checkCarNames(carNames).forEach(carName ->
 			cars.add(new Car(carName)));
 	}
 
