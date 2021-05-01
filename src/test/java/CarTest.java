@@ -5,7 +5,7 @@ public class CarTest {
 	@Test
 	void 자동차_점수_추가() {
 		Car car = new Car("자동차1");
-		car.plusScore();
+		car.play();
 		Assertions.assertThat(car.getScoreStatus()).isEqualTo("자동차1 : -");
 	}
 }

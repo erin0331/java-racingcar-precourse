@@ -25,8 +25,10 @@ public class Car {
 		isWinner = true;
 	}
 
-	public void plusScore() {
-		this.score = this.score + "-";
+	public void play() {
+		if (Judgement.judge().isGone()) {
+			this.score = this.score + "-";
+		}
 	}
 
 	public String getScoreStatus() {

@@ -9,4 +9,12 @@ public class Game {
 		this.cars = cars;
 		this.roundCount = Validator.checkRoundCount(roundCount);
 	}
+
+	public void play() {
+		for (int i = 0; i < roundCount; i++) {
+			cars.play();
+			cars.printScore();
+		}
+	}
+
 }

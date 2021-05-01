@@ -19,6 +19,11 @@ public class Cars {
 	public void printScore() {
 		cars.forEach(car ->
 			System.out.println(car.getScoreStatus()));
+		System.out.println();
+	}
+
+	public void play() {
+		cars.forEach(car -> car.play());
 	}
 
 	public List<Car> getWinner() {
