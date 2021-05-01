@@ -22,7 +22,7 @@ public class CarsTest {
 		Assertions.assertThatExceptionOfType(IllegalArgumentException.class)
 			.isThrownBy(() -> {
 				Cars cars = new Cars("차");
-			}).withMessageMatching("1대 이상의 자동차를 입력 해 주세요.");
+			}).withMessageMatching("2대 이상의 자동차를 입력 해 주세요.");
 	}
 
 	@Test

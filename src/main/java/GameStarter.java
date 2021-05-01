@@ -16,7 +16,9 @@ public class GameStarter {
 		try {
 			gameStarter.start();
 		} catch (IOException e) {
-			e.getMessage();
+			System.out.println(e.getMessage());
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 
