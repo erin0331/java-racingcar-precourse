@@ -17,25 +17,25 @@ public class PrintHelper {
 		}
 	}
 
-	public static void printInputCars() {
+	public static final void printInputCars() {
 		System.out.println(Message.INPUT_CARS.message);
 	}
 
-	public static void printInputRound() {
+	public static final void printInputRound() {
 		System.out.println(Message.INPUT_ROUND.message);
 	}
 
-	public static void printGuidance() {
+	public static final void printGuidance() {
 		printLine();
 		System.out.println(Message.GUIDANCE.message);
 	}
 
-	public static void printScoreStatus(String name, int score) {
+	public static final void printScoreStatus(String name, int score) {
 		System.out.print(StringUtils.join(name, " : ", printBar(score)));
 		printLine();
 	}
 
-	public static void printLine() {
+	public static final void printLine() {
 		System.out.println();
 	}
 
@@ -47,7 +47,7 @@ public class PrintHelper {
 		return bars;
 	}
 
-	public static void printResult(List<String> winnerNames) {
+	public static final void printResult(List<String> winnerNames) {
 		int winnerCount = winnerNames.size();
 		String resultMessage = "";
 		for (int i = 0; i < winnerCount; i++) {

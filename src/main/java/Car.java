@@ -3,12 +3,10 @@ import utils.PrintHelper;
 public class Car {
 	private String name;
 	private int score;
-	private boolean isWinner;
 
 	public Car(String name) {
 		this.name = name;
 		this.score = 0;
-		this.isWinner = false;
 	}
 
 	public String getName() {
@@ -19,12 +17,8 @@ public class Car {
 		return score;
 	}
 
-	public boolean isWinner() {
-		return isWinner;
-	}
-
-	public void setWinner() {
-		isWinner = true;
+	public boolean isWinner(int winnerScore) {
+		return score == winnerScore;
 	}
 
 	public void play() {
@@ -33,7 +27,7 @@ public class Car {
 		}
 	}
 
-	public void printScoreStatus() {
+	public void printScore() {
 		PrintHelper.printScoreStatus(name, score);
 	}
 }

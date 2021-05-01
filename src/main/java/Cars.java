@@ -9,7 +9,7 @@ public class Cars {
 	private final List<Car> cars = new ArrayList<>();
 
 	public Cars(String carNames) {
-		Validator.checkCarNames(carNames).forEach(carName ->
+		Validator.getValidCarNames(carNames).forEach(carName ->
 			cars.add(new Car(carName)));
 	}
 
@@ -18,18 +18,18 @@ public class Cars {
 	}
 
 	public void printScore() {
-		cars.forEach(car -> car.printScoreStatus());
+		cars.forEach(Car::printScore);
 		PrintHelper.printLine();
 	}
 
 	public void play() {
-		cars.forEach(car -> car.play());
+		cars.forEach(Car::play);
 	}
 
 	public List<String> getWinnerNames() {
 		int winnerScore = getWinnerScore();
 		List<String> winnerNames = new ArrayList<>();
-		cars.forEach(car -> chooseWinner(winnerNames, car, winnerScore));
+		cars.forEach(car -> findWinners(winnerNames, car, winnerScore));
 		return winnerNames;
 	}
 
@@ -41,10 +41,10 @@ public class Cars {
 		return Collections.max(scoreList);
 	}
 
-	private void chooseWinner(List<String> winners, Car car, int winnerScore) {
-		if (car.getScore() == winnerScore) {
-			car.setWinner();
+	private void findWinners(List<String> winners, Car car, int winnerScore) {
+		if (car.isWinner(winnerScore)) {
 			winners.add(car.getName());
 		}
 	}
+
 }

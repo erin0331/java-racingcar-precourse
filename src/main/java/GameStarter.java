@@ -28,6 +28,7 @@ public class GameStarter {
 		PrintHelper.printInputRound();
 		Game game = new Game(cars, bufferedReader.readLine());
 		game.play();
+		bufferedReader.close();
 	}
 
 }

@@ -13,8 +13,8 @@ public class Validator {
 	private static final int MAX_CAR_NAME_LENGTH = 5;
 	private static final int MIN_ROUND = 1;
 
-	public static List<String> checkCarNames(String inputCarNames) {
-		List<String> carNames = Arrays.asList(inputCarNames.split(CAR_NAME_DELIMITER));
+	public static final List<String> getValidCarNames(String rawCarNames) {
+		List<String> carNames = Arrays.asList(rawCarNames.split(CAR_NAME_DELIMITER));
 		checkCarCount(carNames);
 		for (String carName : carNames) {
 			checkCarNameLength(carName);
@@ -42,10 +42,10 @@ public class Validator {
 		}
 	}
 
-	public static int checkRoundCount(String inputRoundCount) {
+	public static final int getValidRoundCount(String rawRoundCount) {
 		int roundCount = 0;
 		try {
-			roundCount = Integer.parseInt(inputRoundCount);
+			roundCount = Integer.parseInt(rawRoundCount);
 		} catch (NumberFormatException e) {
 			throw new IllegalArgumentException("라운드는 숫자만 입력 가능합니다.");
 		}

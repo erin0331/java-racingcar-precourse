@@ -8,7 +8,7 @@ public class Game {
 
 	public Game(Cars cars, String roundCount) {
 		this.cars = cars;
-		this.roundCount = Validator.checkRoundCount(roundCount);
+		this.roundCount = Validator.getValidRoundCount(roundCount);
 	}
 
 	public void play() {
@@ -20,7 +20,7 @@ public class Game {
 		printResult();
 	}
 
-	public void printResult() {
+	private void printResult() {
 		PrintHelper.printResult(cars.getWinnerNames());
 	}
 }
