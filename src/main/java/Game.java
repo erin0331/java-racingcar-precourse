@@ -12,6 +12,7 @@ public class Game {
 	}
 
 	public void play() {
+		PrintHelper.printGuidance();
 		for (int i = 0; i < roundCount; i++) {
 			cars.play();
 			cars.printScore();
