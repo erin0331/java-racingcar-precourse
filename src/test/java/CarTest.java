@@ -6,6 +6,6 @@ public class CarTest {
 	void 자동차_점수_추가() {
 		Car car = new Car("자동차1");
 		car.play();
-		Assertions.assertThat(car.getScoreStatus()).isEqualTo("자동차1 : -");
+		Assertions.assertThat(car.getScore()).isEqualTo(1);
 	}
 }

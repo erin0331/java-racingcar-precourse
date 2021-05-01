@@ -12,9 +12,9 @@ public class CarsTest {
 
 	@Test
 	void 자동차_3대_추가() {
-		Assertions.assertThat(cars.getCar(0).getScoreStatus()).isEqualTo("차1 : ");
-		Assertions.assertThat(cars.getCar(1).getScoreStatus()).isEqualTo("차2 : ");
-		Assertions.assertThat(cars.getCar(2).getScoreStatus()).isEqualTo("차3 : ");
+		Assertions.assertThat(cars.getCar(0).getScore()).isEqualTo(0);
+		Assertions.assertThat(cars.getCar(1).getScore()).isEqualTo(0);
+		Assertions.assertThat(cars.getCar(2).getScore()).isEqualTo(0);
 	}
 
 	@Test

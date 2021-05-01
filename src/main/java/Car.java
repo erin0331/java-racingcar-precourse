@@ -1,11 +1,13 @@
+import utils.PrintHelper;
+
 public class Car {
 	private String name;
-	private String score;
+	private int score;
 	private boolean isWinner;
 
 	public Car(String name) {
 		this.name = name;
-		this.score = "";
+		this.score = 0;
 		this.isWinner = false;
 	}
 
@@ -14,7 +16,7 @@ public class Car {
 	}
 
 	public int getScore() {
-		return score.length();
+		return score;
 	}
 
 	public boolean isWinner() {
@@ -27,11 +29,11 @@ public class Car {
 
 	public void play() {
 		if (Judgement.judge().isGone()) {
-			this.score = this.score + "-";
+			score++;
 		}
 	}
 
-	public String getScoreStatus() {
-		return this.name + " : " + this.score;
+	public void printScoreStatus() {
+		PrintHelper.printScoreStatus(name, score);
 	}
 }

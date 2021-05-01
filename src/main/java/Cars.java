@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import utils.PrintHelper;
 import utils.Validator;
 
 public class Cars {
@@ -17,9 +18,8 @@ public class Cars {
 	}
 
 	public void printScore() {
-		cars.forEach(car ->
-			System.out.println(car.getScoreStatus()));
-		System.out.println();
+		cars.forEach(car -> car.printScoreStatus());
+		PrintHelper.printLine();
 	}
 
 	public void play() {
