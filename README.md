@@ -18,7 +18,7 @@
 1. TDD로 구현 가능한 요구사항을 먼저 구현한다.
 
 - [x] 자동차 이름 객체 (CarNames)
-- [ ] 라운드 객체 (Round)
+- [x] 라운드 객체 (Round)
 - [ ] 전진, 멈춤 판별 객체 (Game)
 - [ ] 전진, 멈춤 현황을 저장 할 객체 (ScoreGenerator)
 - [ ] 우승자 계산 객체 (Judgment)
