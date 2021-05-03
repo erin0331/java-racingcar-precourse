@@ -2,12 +2,16 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import constant.MoveStatus;
+
 public class CarsTest {
 	private Cars cars;
+	private Judgement judgement;
 
 	@BeforeEach
 	void initCar() {
 		cars = new Cars("차1,차2,차3");
+		judgement = new Judgement();
 	}
 
 	@Test
@@ -43,15 +47,16 @@ public class CarsTest {
 
 	@Test
 	void 우승자_1명() {
-		cars.getCar(0).play();
+		cars.getCar(0).play(MoveStatus.GO);
+		cars.getCar(0).play(MoveStatus.GO);
+		cars.getCar(1).play(MoveStatus.GO);
 		Assertions.assertThat(cars.getWinnerNames().size()).isEqualTo(1);
 	}
 
 	@Test
 	void 우승자_2명() {
-		cars.getCar(0).play();
-		cars.getCar(1).play();
-
+		cars.getCar(0).play(MoveStatus.GO);
+		cars.getCar(1).play(MoveStatus.GO);
 		Assertions.assertThat(cars.getWinnerNames().size()).isEqualTo(2);
 	}
 }

@@ -1,3 +1,4 @@
+import constant.MoveStatus;
 import utils.PrintHelper;
 
 public class Car {
@@ -21,8 +22,8 @@ public class Car {
 		return score == winnerScore;
 	}
 
-	public void play() {
-		if (Judgement.judge().isGone()) {
+	public void play(MoveStatus moveStatus) {
+		if (moveStatus.isGone()) {
 			score++;
 		}
 	}

@@ -13,7 +13,7 @@ public class Cars {
 			cars.add(new Car(carName)));
 	}
 
-	public Car getCar(int carOrder) {
+	Car getCar(int carOrder) {
 		return cars.get(carOrder);
 	}
 
@@ -22,8 +22,8 @@ public class Cars {
 		PrintHelper.printLine();
 	}
 
-	public void play() {
-		cars.forEach(Car::play);
+	public void play(Judgement judgement) {
+		cars.forEach(car -> car.play(judgement.judge()));
 	}
 
 	public List<String> getWinnerNames() {
