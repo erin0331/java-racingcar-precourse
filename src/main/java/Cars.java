@@ -29,7 +29,7 @@ public class Cars {
 	public List<String> getWinnerNames() {
 		int winnerScore = getWinnerScore();
 		List<String> winnerNames = new ArrayList<>();
-		cars.forEach(car -> findWinners(winnerNames, car, winnerScore));
+		cars.forEach(car -> addWinnerNames(winnerNames, car, winnerScore));
 		return winnerNames;
 	}
 
@@ -41,7 +41,7 @@ public class Cars {
 		return Collections.max(scoreList);
 	}
 
-	private void findWinners(List<String> winners, Car car, int winnerScore) {
+	private void addWinnerNames(List<String> winners, Car car, int winnerScore) {
 		if (car.isWinner(winnerScore)) {
 			winners.add(car.getName());
 		}
