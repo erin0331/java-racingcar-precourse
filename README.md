@@ -17,26 +17,28 @@
 
 1. TDD로 구현 가능한 요구사항을 먼저 구현한다.
 
-- [ ] 자동차 객체 (Car)
+- [x] 자동차 객체 (Car)
     - 자동차이름, 점수를 갖는다.
     - 점수를 추가 기능 구현
-- [ ] 자동차 리스트 객체 (Cars)
-    - 자동차 1 대 이상 유효셩 체크
+- [x] 자동차 리스트 객체 (Cars)
+    - 자동차 1 대 이상, 자동차 이름 길이 5자 이하 유효셩 체크
     - 진행 중 스코어 출력 기능 구현
     - 승자 구하는 기능 구현
-- [ ] 게임 진행 객체 (Game)
+- [x] 게임 진행 객체 (Game)
     - 라운드 입력 받아 유효성 체크 (1이상의 숫자)
-    - 전체 게임 진행
-    - 라운드 별 게임 진행
-    - 점수 추가를 판단 하는 기능 (추가가 필요한 경우 Car로 메시지 호출)
+    - 게임 진행
+    - Cars 객체로 명령을 보내는 역할
+    - 최종 결과 출력
 
 2. 랜덤 생성과 관련 된 부분을 구현한다.
 
-- [ ] 랜덤 숫자 객체 (RandomNumber)
-- [ ] 전진/멈춤 판단 객체 (Judgement)
-- [ ] 전진/멈춤 enum 구현 (MoveStatus)
+- [x] 랜덤 숫자 객체 (RandomNumber)
+- [x] 전진/멈춤 판단 객체 (Judgement)
+- [x] 전진/멈춤 enum 구현 (MoveStatus)
 
 3. 그 외 게임 실행 및 메시지와 관련된 부분을 구현한다.
 
-- [ ] Message 출력 enum 구현 (Message)
-- [ ] 게임 시작 Application 구현 (GameStarter)
+- [x] Message 출력 enum 구현 (Message)
+- [x] print log에 대한 util클래스 구현 (PrintHelper)
+- [x] 게임 시작 Application 구현 (GameStarter)
+- [x] validation체크 객체 구현 (Validator)
